@@ -6,22 +6,11 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 16:00:19 by aburga-g          #+#    #+#             */
-/*   Updated: 2024/05/27 12:08:53 by aburga-g         ###   ########.fr       */
+/*   Updated: 2024/07/25 17:32:58 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/**
- * @brief busca la primera aparción de un carácter específico en un bloque
- *  de memoria, recorriendo los primeros 'n' bytes del bloque apuntado por
- * 's'.
- * @param s puntero al bloque de memoria.
- * @param c el caracter a buscar.
- * @param n el numero de bytes que se van a examinar.
- * @return void* un puntero a la primera aparición del carácter o NULL si no se
- * encuentra.
- */
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

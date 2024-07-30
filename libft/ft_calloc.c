@@ -6,21 +6,12 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 17:07:17 by aburga-g          #+#    #+#             */
-/*   Updated: 2024/05/23 19:09:01 by aburga-g         ###   ########.fr       */
+/*   Updated: 2024/07/25 17:35:10 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/**
- * @brief asigna e inicializa memoria para una matriz de elementos.
- * 
- * @param count el numero de elementos asignar.
- * @param size el tamaño de cada elemento.
- * @return void* si la asignacion de memoria se realiza correctamente 
- * se de velve un puntero al boque de memoria asignado.
- * de lo contrario si "size" es cero o falla la asignacion de memoria,
- * se devuelve NULL.
- */
+
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*r;

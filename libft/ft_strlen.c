@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aburga-g <aburga-g@student.42.fr>          #+#  +:+       +#+        */
+/*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-04-18 12:36:10 by aburga-g          #+#    #+#             */
-/*   Updated: 2024-04-18 12:36:10 by aburga-g         ###   ########.fr       */
+/*   Created: 2024/04/18 12:36:10 by aburga-g          #+#    #+#             */
+/*   Updated: 2024/07/25 13:45:04 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_strlen(const char *str)

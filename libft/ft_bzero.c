@@ -6,18 +6,11 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:12:33 by aburga-g          #+#    #+#             */
-/*   Updated: 2024/05/23 18:42:44 by aburga-g         ###   ########.fr       */
+/*   Updated: 2024/07/25 17:21:58 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/**
- * @brief se utiliza para establecer a cero un bloque de memoria.
- * 
- * @param s un puntero al bloque de memoria.
- * @param n el numero de bytes que se establecerán en cero.
- */
 
 void	ft_bzero(void *s, size_t n)
 {

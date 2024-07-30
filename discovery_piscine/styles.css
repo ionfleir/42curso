@@ -1,0 +1,13 @@
+body {
+	display: flex;
+	flex-direction: column;
+	height: 410px;
+}
+.imagen-container {
+	display: flex;
+	justify-content: center;
+	height: 410px;
+}
+img {
+	margin: 0 5px;
+}

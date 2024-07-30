@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:20:30 by aburga-g          #+#    #+#             */
-/*   Updated: 2024/05/28 14:36:54 by aburga-g         ###   ########.fr       */
+/*   Updated: 2024/07/25 13:19:04 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
  * numero, en una variable entera de tipo "int".
  * 
  * @param str un puntero a la cadena que se va convertir.
- * @return int El valor entero obtenido de la cadena de entrada.
+ * @return int el numero convertido.
  */
 
 int	ft_atoi(const char *str)

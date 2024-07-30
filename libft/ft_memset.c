@@ -3,23 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aburga-g <aburga-g@student.42.fr>          #+#  +:+       +#+        */
+/*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-04-18 12:58:51 by aburga-g          #+#    #+#             */
-/*   Updated: 2024-04-18 12:58:51 by aburga-g         ###   ########.fr       */
+/*   Created: 2024/04/18 12:58:51 by aburga-g          #+#    #+#             */
+/*   Updated: 2024/07/25 17:05:28 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * @brief llena un bloque de memoria con una valor específico.
- * 
- * @param b puntero al bloque de memoria que se va a llenar.
- * @param c el valor a establecer.
- * @param n numero de bytes que se establecerán.
- * @return void* un puntero al bloque de memoria una vez que se ha llenado.
- */
 void	*ft_memset(void *b, int c, size_t n)
 {
 	unsigned char	*ptr;

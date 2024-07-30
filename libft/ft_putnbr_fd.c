@@ -3,23 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aburga-g <aburga-g@student.42.fr>          #+#  +:+       +#+        */
+/*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-05-13 14:59:35 by aburga-g          #+#    #+#             */
-/*   Updated: 2024-05-13 14:59:35 by aburga-g         ###   ########.fr       */
+/*   Created: 2024/05/13 14:59:35 by aburga-g          #+#    #+#             */
+/*   Updated: 2024/07/30 11:39:58 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/**
- * @brief toma un numero entero 'n' y lo escribe en el archivo o dispositivo
- * indicado por el descriptor de archivo 'fd'. Maneje números negativos y el
- * valor mínimo de un entero con signo en C de manera especial.
- * 
- * @param n el numero entero que se va escribir.
- * @param fd el descriptor de archivo donde se va a escribir el numero.
- */
 
 void	ft_putnbr_fd(int n, int fd)
 {

@@ -3,25 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aburga-g <aburga-g@student.42.fr>          #+#  +:+       +#+        */
+/*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-05-02 16:01:36 by aburga-g          #+#    #+#             */
-/*   Updated: 2024-05-02 16:01:36 by aburga-g         ###   ########.fr       */
+/*   Created: 2024/05/02 16:01:36 by aburga-g          #+#    #+#             */
+/*   Updated: 2024/07/25 17:34:06 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * @brief compara los primeros 'n' bytes de dos bloques de memoria.
- * 
- * @param s1 puntero constante al primer bloque de memoria.
- * @param s2 puntero constante al segundo bloque de memoria.
- * @param n numero de bytes que se van a comparar.
- * @return int valor entero que indica la diferencia de la comparación
- * indicando cuál bloque es mayor. 
- * o '0' si las areas de memoria con iguales.
- */
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	char	*orig;

@@ -3,25 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aburga-g <aburga-g@student.42.fr>          #+#  +:+       +#+        */
+/*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-04-30 17:30:16 by aburga-g          #+#    #+#             */
-/*   Updated: 2024-04-30 17:30:16 by aburga-g         ###   ########malaga    */
+/*   Created: 2024/04/30 17:30:16 by aburga-g          #+#    #+#             */
+/*   Updated: 2024/07/25 17:21:20 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/**
- * @brief copia 'n' bytes desde un bloque de memoria 'src' a otro 'dest' si 
- * 'dest' y 'src' se supermonen o si alguno de ellos es 'NULL', no se realiza 
- * la copia.
- * 
- * @param dest puntero al bloque de memoria destino.
- * @param src puntero al bloque de memoria origen.
- * @param n el numero de bytes a copiar.
- * @return void* un puntero al bloque de momiria de destino.
- */
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
