@@ -1,0 +1,6 @@
+Este es un ejemplo
+de texto con
+saltos de línea.
+Cada línea está
+separada por un
+salto de línea.
