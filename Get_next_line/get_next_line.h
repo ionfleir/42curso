@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 21:46:13 by aburga-g          #+#    #+#             */
-/*   Updated: 2024/08/26 12:50:01 by aburga-g         ###   ########.fr       */
+/*   Updated: 2024/09/10 10:56:26 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 # define GET_NEXT_LINE_H
 
 # include <unistd.h>
-# include <fcntl.h>
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 char	*get_next_line(int fd);
 
