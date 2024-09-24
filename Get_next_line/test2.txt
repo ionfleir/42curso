@@ -1,4 +1,4 @@
-Fste es un ejemplo
+Este es un ejemplo
 de texto con
 saltos de línea.
 Cada línea está

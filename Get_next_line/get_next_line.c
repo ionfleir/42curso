@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 21:46:25 by aburga-g          #+#    #+#             */
-/*   Updated: 2024/09/17 18:14:06 by aburga-g         ###   ########.fr       */
+/*   Updated: 2024/09/23 10:54:43 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,32 +19,6 @@ char	*ft_free(char *buffer, char *buf)
 	buffer2 = ft_strjoin(buffer, buf);
 	free(buffer);
 	return (buffer2);
-}
-
-static char	*buffer_copy(char *buffer)
-{
-	char	*line;
-	int		i;
-
-	i = 0;
-	line = 0;
-	if (buffer[i] == '\0')
-		return (0);
-	while (buffer[i] != '\n' && buffer[i] != '\0')
-		i++;
-	if (buffer[i] == '\n')
-		line = ft_calloc((i + 2), sizeof(char));
-	else
-		line = ft_calloc((i + 1), sizeof(char));
-	i = 0;
-	while (buffer[i] && buffer[i] != '\n')
-	{
-		line[i] = buffer[i];
-		i++;
-	}
-	if (buffer[i] == '\n')
-		line[i] = '\n';
-	return (line);
 }
 
 char	*buffer_rest(char *buffer)
@@ -72,6 +46,32 @@ char	*buffer_rest(char *buffer)
 	}
 	free(buffer);
 	return (temp);
+}
+
+static char	*buffer_copy(char *buffer)
+{
+	char	*line;
+	int		i;
+
+	i = 0;
+	line = 0;
+	if (buffer[i] == '\0')
+		return (0);
+	while (buffer[i] != '\n' && buffer[i] != '\0')
+		i++;
+	if (buffer[i] == '\n')
+		line = ft_calloc((i + 2), sizeof(char));
+	else
+		line = ft_calloc((i + 1), sizeof(char));
+	i = 0;
+	while (buffer[i] && buffer[i] != '\n')
+	{
+		line[i] = buffer[i];
+		i++;
+	}
+	if (buffer[i] == '\n')
+		line[i] = '\n';
+	return (line);
 }
 
 static char	*read_file(char *buffer, int fd)
@@ -133,7 +133,7 @@ int	main(void)
 	int		i;
 
 	i = 1;
-	fd = open("test.txt", O_RDONLY);
+	fd = open("test1.txt", O_RDONLY);
 	while (i > 0)
 	{
 		line = get_next_line(fd);

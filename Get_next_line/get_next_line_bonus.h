@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 12:51:19 by aburga-g          #+#    #+#             */
-/*   Updated: 2024/09/13 13:08:33 by aburga-g         ###   ########.fr       */
+/*   Updated: 2024/09/20 15:53:48 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,17 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
+# include <fcntl.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
 
 # ifndef MAX_FD
-#  define MAX_FD 3
+#  define MAX_FD 4
 # endif
 
-char	*get_next_line_bonus(int fd);
+char	*get_next_line(int fd);
 
 /* auxiliary functions*/
 char	*ft_strchr(const char *s, int c);

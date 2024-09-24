@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 12:51:13 by aburga-g          #+#    #+#             */
-/*   Updated: 2024/09/17 18:31:17 by aburga-g         ###   ########.fr       */
+/*   Updated: 2024/09/23 10:37:05 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strchr(const char *s, int c)
 
 size_t	ft_strlen(const char *str)
 {
-	size_t	i;
+	unsigned long	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -65,6 +65,7 @@ void	ft_bzero(void *s, size_t n)
 	unsigned int	i;
 
 	ptr = (unsigned char *)s;
+	i = 0;
 	while (i < n)
 	{
 		ptr[i] = 0;
@@ -79,7 +80,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	e = count * size;
 	r = malloc (e);
-	if (!e)
+	if (!r)
 		return (NULL);
 	ft_bzero(r, e);
 	return (r);
