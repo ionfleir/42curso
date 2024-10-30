@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 12:51:19 by aburga-g          #+#    #+#             */
-/*   Updated: 2024/09/20 15:53:48 by aburga-g         ###   ########.fr       */
+/*   Updated: 2024/10/01 12:23:02 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,6 @@
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
-# endif
-
-# ifndef MAX_FD
-#  define MAX_FD 4
 # endif
 
 char	*get_next_line(int fd);

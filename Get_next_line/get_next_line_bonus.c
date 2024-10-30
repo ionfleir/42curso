@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 12:51:16 by aburga-g          #+#    #+#             */
-/*   Updated: 2024/09/24 12:08:50 by aburga-g         ###   ########.fr       */
+/*   Updated: 2024/10/01 12:23:47 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ static char	*read_file(char *buffer, int fd)
 		{
 			free(temp);
 			free(buffer);
-			return (0);
+			return (NULL);
 		}
 		temp[i] = '\0';
 		buffer = ft_free(buffer, temp);
@@ -100,11 +100,11 @@ static char	*read_file(char *buffer, int fd)
 
 char	*get_next_line(int fd)
 {
-	static char	*buffer[MAX_FD];
+	static char	*buffer[__FD_SETSIZE];
 	char		*line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
-		return (0);
+	if (fd < 0 || BUFFER_SIZE <= 0)
+		return (NULL);
 	buffer[fd] = read_file(buffer[fd], fd);
 	if (buffer[fd] == 0)
 		return (NULL);
