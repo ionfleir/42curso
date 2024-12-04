@@ -64,7 +64,7 @@ int	ft_putnbr_u(unsigned int num);
  * @param c caracter que se desea imprimir.
  * @return int retorna la cantidad de caracteres impresos.
  */
-int	ft_puthex(unsigned long long n, char c);
+int	ft_puthex(unsigned long n, char c);
 /**
  * @brief funcion que imprime un puntero.
  * 

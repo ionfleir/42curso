@@ -1,4 +1,4 @@
-/*#include <stdio.h>
+#include <stdio.h>
 
 int	main(void)
 {
@@ -48,4 +48,4 @@ int	main(void)
 	if (f == p)
 		ft_printf("OK\n");
 	return (0);
-}*/
+}

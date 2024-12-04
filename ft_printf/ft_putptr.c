@@ -22,7 +22,7 @@ int	ft_putptr(void *c)
 	else
 	{
 		ptr += ft_putstr("0x");
-		ptr += ft_puthex((unsigned long long)c, 'x');
+		ptr += ft_puthex((unsigned long)c, 'x');
 	}
 	return (ptr);
 }

@@ -30,7 +30,7 @@ bonus: $(OBJS) $(BONUS_OBJS)
 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 %.o : %.c
-	clang -c $(CFLAGS) $< -o $@
+	gcc -c $(CFLAGS) $< -o $@
 
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
