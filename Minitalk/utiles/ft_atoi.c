@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 13:19:57 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/01/10 15:42:13 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/01/13 10:22:17 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_atoi(const char *str)
 		str++;
 	while (*str)
 	{
-		if (*str < '0' || *str > '9')// si no son numeros
+		if (*str < '0' || *str > '9')
 		{
 			printf("Error: Debe ser un número válido.\n");
 			exit(EXIT_FAILURE);
@@ -46,4 +46,3 @@ int	ft_atoi(const char *str)
 	printf ("este es el resultado:%d\n", n);
 	return (0);
 }*/
-
