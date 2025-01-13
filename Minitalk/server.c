@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aburga-g <aburga-g@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:09:06 by aburga-g          #+#    #+#             */
-/*   Updated: 2024/11/06 17:09:06 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/01/10 15:38:08 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	signal_handler(int signal)
 	{
 		write (1, &current_char, 1); // Imprimir el carácter
 		bit_count = 0;               // Reiniciar el contador de bits
-		current_char = 0;            // Reiniciar el acumilador
+		current_char = 0;            // Reiniciar el acumulador
 	}
 }
 

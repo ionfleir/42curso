@@ -20,7 +20,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 
 	str = 0;
 	len_n = ft_strlen(s);
-	if (len_n == 0 || start > len_n || len <= 0)
+	if (len_n == 0 || start > len_n || len <= 0 || start < 0)
 		return (ft_strdup(""));
 	else
 	{

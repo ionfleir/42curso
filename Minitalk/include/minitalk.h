@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putptr.c                                        :+:      :+:    :+:   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/11 13:18:34 by aburga-g          #+#    #+#             */
-/*   Updated: 2024/07/11 17:45:20 by aburga-g         ###   ########.fr       */
+/*   Created: 2025/01/07 11:06:33 by aburga-g          #+#    #+#             */
+/*   Updated: 2025/01/10 14:39:49 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef MINITALK_H
+# define MINITALK_H
 
-int	ft_putptr(void *c)
-{
-	int	ptr;
+# include <signal.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
 
-	ptr = 0;
-	if (c == NULL)
-		ptr += ft_putstr("(nil)");
-	else
-	{
-		ptr += ft_putstr("0x");
-		ptr += ft_puthex((unsigned long long)c, 'x');
-	}
-	return (ptr);
-}
+int		ft_atoi(const char *str);
+void	signal_handler(int signal);
+void	send_char(int pid, char c, unsigned int delay);
+void	send_str(int pid, const char *str, unsigned int delay);
+void	val_arg(int argc, char *argv[]);
+
+#endif
