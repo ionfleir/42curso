@@ -6,11 +6,12 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:09:12 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/01/10 16:16:24 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/01/13 10:22:39 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/minitalk.h"
+#include "./ft_printf/ft_printf.h"
 
 /**
  * @brief send_char: Envía un carácter a un proceso usando señales.
@@ -54,12 +55,12 @@ void	val_arg(int argc, char *argv[])
 	pid = ft_atoi(argv[1]);
 	if (pid <= 0)
 	{
-		printf("Error: PID, invalido.\n");
+		ft_printf("Error: PID, invalido.\n");
 		exit(EXIT_FAILURE);
 	}
 	if (argv[2][0] == '\0')
 	{
-		printf("Error: El mensaje no puede estar vacío.\n");
+		ft_printf("Error: El mensaje no puede estar vacío.\n");
 		exit(EXIT_FAILURE);
 	}
 	delay = 100;
@@ -74,7 +75,7 @@ int	main(int argc, char **argv)
 
 	if (argc < 3 || argc > 4)
 	{
-		printf ("Erro: El numero de argumentos es invalido\n");
+		ft_printf ("Erro: El numero de argumentos es invalido\n");
 		exit(EXIT_FAILURE);
 	}
 	if (argc == 4)
@@ -82,7 +83,7 @@ int	main(int argc, char **argv)
 		delay = ft_atoi(argv[3]);
 		if (delay <= 0)
 		{
-			printf ("Erro: el retraso debe ser mayor a 0\n");
+			ft_printf ("Erro: el retraso debe ser mayor a 0\n");
 			exit(EXIT_FAILURE);
 		}
 	}
