@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:09:12 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/01/13 10:22:39 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/01/13 11:19:15 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 /**
  * @brief send_char: Envía un carácter a un proceso usando señales.
- * Esta funf
+ * Esta funcion 
  * 
  * @param pid Señal que se va enviar SIGUSR1 o SIGUSR2 si el bit es 1 o 0.
  * @param c Caracter que se va enviar.
@@ -75,7 +75,7 @@ int	main(int argc, char **argv)
 
 	if (argc < 3 || argc > 4)
 	{
-		ft_printf ("Erro: El numero de argumentos es invalido\n");
+		ft_printf ("Error: El numero de argumentos es invalido\n");
 		exit(EXIT_FAILURE);
 	}
 	if (argc == 4)
@@ -83,7 +83,7 @@ int	main(int argc, char **argv)
 		delay = ft_atoi(argv[3]);
 		if (delay <= 0)
 		{
-			ft_printf ("Erro: el retraso debe ser mayor a 0\n");
+			ft_printf ("Error: el retraso debe ser mayor a 0\n");
 			exit(EXIT_FAILURE);
 		}
 	}
