@@ -6,46 +6,39 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:09:06 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/01/10 15:38:08 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/01/13 10:24:31 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/minitalk.h"
+#include "./ft_printf/ft_printf.h"
 
 void	signal_handler(int signal)
 {
 	static int	current_char = 0;
 	static int	bit_count = 0;
 
-	// Acumular el bit recibido
 	if (signal == SIGUSR1)
-		current_char = (current_char << 1) | 1; // Añadir un '1'
+		current_char = (current_char << 1) | 1;
 	else if (signal == SIGUSR2)
-		current_char = (current_char << 1); // Añadir un 0
+		current_char = (current_char << 1);
 	bit_count++;
-
-	// Si hemos recibido los 8 bits, imprimir el carácter
 	if (bit_count == 8)
 	{
-		write (1, &current_char, 1); // Imprimir el carácter
-		bit_count = 0;               // Reiniciar el contador de bits
-		current_char = 0;            // Reiniciar el acumulador
+		write (1, &current_char, 1);
+		bit_count = 0;
+		current_char = 0;
 	}
 }
 
 int	main(void)
 {
-	// Registrar los manejadores de señales
 	signal(SIGUSR1, signal_handler);
 	signal(SIGUSR2, signal_handler);
-
-	// Mostrar el ID del proceso
-	printf ("Servidor: obtenido ID del Procese %d\n", getpid());
-
-	//Bucle infinito esperando señales
+	ft_printf ("Servidor: obtenido ID del Procese %d\n", getpid());
 	while (1)
 	{
-		pause(); //Suspende el proceso hasta que reciba una señal
+		pause();
 	}
 	return (0);
 }
