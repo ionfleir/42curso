@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:09:12 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/01/13 11:19:15 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/01/15 11:41:35 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 #include "./ft_printf/ft_printf.h"
 
 /**
- * @brief send_char: Envía un carácter a un proceso usando señales.
- * Esta funcion 
+ * @brief send_char: Envía un caracter (c) bit a bit del mas significativo (7)
+ * al menos significativo (0), atravez de señales al proceso con el
+ * identificador PID, utiliza las señales SIGUSR1 Y SIGUSR2 representar 1 y 0,
+ * (usleep), lo usamos para asegurar un retraso para el envio de las señales. 
  * 
- * @param pid Señal que se va enviar SIGUSR1 o SIGUSR2 si el bit es 1 o 0.
+ * @param pid Identificador donde se envian las señales SIGUSR1 Y SIGUSR2
  * @param c Caracter que se va enviar.
  * @param delay Tiempo de espera.
  */
@@ -37,6 +39,15 @@ void	send_char(int pid, char c, unsigned int delay)
 	}
 }
 
+/**
+ * @brief send_str: envía cada carácter de una cadena incluido el termino nulo
+ al proceso (PID). Cada carácter se transmite uno por uno me dienta la funcion
+ send_char con un retraso configurable (delay).
+ 
+ * @param pid Identificador donde se envia las señales
+ * @param str Cadena que se envia
+ * @param delay Tiempo de espera
+ */
 void	send_str(int pid, const char *str, unsigned int delay)
 {
 	while (*str)
