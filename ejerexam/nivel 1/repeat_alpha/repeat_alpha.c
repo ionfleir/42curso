@@ -21,13 +21,9 @@ void	repeat_alpha(char *str)
 
 int	main(int argc, char **argv)
 {
-	int	i = 0;
-
 	if (argc == 2)
-	{
-		repeat_alpha(&argv[1][i]);
-		write(1, &argv[1][i], 1);
-	}
-	write(1, "\n", 1);
+		repeat_alpha(argv[1]);
+	else
+		write(1, "\n", 1);
 	return (0);
 }

@@ -15,7 +15,7 @@ char	*ft_strcpy(char *s1, char *s2)
 	return (s1);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	char	orig[] = "hola_como esta";
 	char	dest[50];
@@ -25,4 +25,4 @@ char	*ft_strcpy(char *s1, char *s2)
 	ft_strcpy(dest, orig);
 	printf("La copia es:%s\n", dest);
 	return (0);
-}*/
+}
