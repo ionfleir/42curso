@@ -7,9 +7,9 @@ void	ulstr(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
+		if (str[i] >= 'a')
 			str[i] -= 32;
-		else if (str[i] >= 'A' && str[i] <= 'Z')
+		else if (str[i] >= 'A')
 			str[i] += 32;
 		write (1, &str[i], 1);
 		i++;
