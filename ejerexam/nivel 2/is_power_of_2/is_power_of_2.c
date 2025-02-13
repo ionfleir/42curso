@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int	is_powor_of_2(unsigned int n)
+int	is_power_of_2(unsigned int n)
 {
 	int	i = 1;
 
@@ -15,6 +15,6 @@ int	is_powor_of_2(unsigned int n)
 
 int	main(void)
 {
-	printf("%d", is_powor_of_2(-1));
+	printf("%d", is_power_of_2(16));
 	return (0);
 }
