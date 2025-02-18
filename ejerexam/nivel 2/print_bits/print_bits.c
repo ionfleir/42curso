@@ -2,15 +2,15 @@
 
 void	print_bits(unsigned char octet)
 {
-	int	bit = 7;
+	unsigned int	bit;
 
-	while (bit >= 0)
+	bit = 8;
+	while (bit--)
 	{
 		if ((octet >> bit) & 1)
-			write(1, "1", 1);
+			write (1, "1", 1);
 		else
-			write(1, "0", 1);
-		bit--;
+			write (1, "0", 1);
 	}
 }
 
@@ -19,4 +19,3 @@ int	main()
 	print_bits(2);
 	return (0);
 }
-
