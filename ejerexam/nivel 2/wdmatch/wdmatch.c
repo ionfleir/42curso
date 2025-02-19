@@ -2,8 +2,8 @@
 
 int	main(int argc, char **argv)
 {
-	int		i = 0;
-	int		j = 0;
+	int	i = 0;
+	int	j = 0;
 
 	if (argc == 3)
 	{

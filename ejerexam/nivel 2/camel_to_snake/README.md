@@ -6,8 +6,8 @@ Escribe un programa que tome una única cadena en formato lowerCamelCase y la co
 
 Una cadena en lowerCamelCase es una cadena donde cada palabra comienza con una letra mayúscula, excepto la primera palabra.
 Una cadena en snake_case es una cadena donde cada palabra está en minúsculas y separada por un guion bajo "_".
-Ejemplos:
 
+Ejemplos:
 $>./camel_to_snake "hereIsACamelCaseWord"
 here_is_a_camel_case_word
 $>./camel_to_snake "helloWorld" | cat -e
