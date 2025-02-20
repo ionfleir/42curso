@@ -6,16 +6,16 @@ unsigned char	swap_bits(unsigned char octet)
 	return (octet >> 4 | octet << 4);
 }
 
-/*void	print_bits(unsigned char octet)
+void	print_bits(unsigned char octet)
 {
-	int	bit = 8;
+	unsigned int	bit = 8;
 
 	while (bit--)
 	{
 		if ((octet >> bit) & 1)
-			write (1, "1", 1);
+			write(1, "1", 1);
 		else
-			write (1, "0", 1);
+			write(1, "0", 1);
 	}
 }
 
@@ -29,4 +29,6 @@ int	main()
 	printf("\ndepues del cambio\n");
 	print_bits(revers);
 	return (0);
-}*/
+}
+
+

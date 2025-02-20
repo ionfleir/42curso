@@ -6,9 +6,9 @@ void	repeat_alpha(char *str)
 	int	count;
 
 	i = 0;
-	count = 1;
 	while (str[i])
 	{
+		count = 1;
 		if (str[i] >= 'a' && str[i] <= 'z')
 			count = str[i] - 'a' + 1;
 		else if (str[i] >= 'A' && str[i] <= 'Z')
