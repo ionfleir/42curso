@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 19:14:32 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/13 17:25:44 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/03/18 15:16:53 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(int argc, char **argv)
 {
-	t_stack_node	a;
+	t_stack	a;
 	a = //crear un funcion para crear la pila a
 	if (!a || si hay duplicados(a))
 	//comprobar si la pila no se creo (!a), o si hay duplicados Funcion si hay 
