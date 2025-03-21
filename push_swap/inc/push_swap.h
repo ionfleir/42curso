@@ -6,14 +6,13 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 08:44:25 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/18 17:01:54 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/03/20 15:47:02 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <stdbool.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include "../libft/libft.h"
@@ -31,16 +30,17 @@ typedef struct s_stack
 
 /*...Stack initiation...*/
 t_stack	*ft_stack_add(int argc, char **argv);
-t_stack	*ft_stack_new(void *content);
 
 /*...errors...*/
 void	ft_error(void);
 /*...Nodes initiation...*/
-t_stack	*ft_stack_new(void *content);
-
+t_stack	*ft_stack_new(int content);
+t_stack	*ft_stacklast(t_stack *stack);
+void	ft_stack_back(t_stack **head, t_stack *new_nodo);
+void	print_stack(t_stack *stack);
 /*...Operations...*/
-void	ft_sa(t_stack **a, int j);
-void	ft_sb(t_stack **b, int j);
+/*void	ft_sa(t_stack **a, int j);
+void	ft_sb(t_stack **b, int j);*/
 /*...Comands...*/
 
 /*...Algoritmos...*/

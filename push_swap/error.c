@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   erro.c                                             :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 16:18:44 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/18 16:24:13 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/03/20 15:41:04 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/push_swap.h"
+#include "inc/push_swap.h"
 
 /**
  * @brief funcion para la salida estandar si ocurre un error
@@ -18,6 +18,6 @@
  */
 void	ft_error(void)
 {
-	write(1, "error\n", 5);
+	write(1, "error\n", 6);
 	exit(1);
 }

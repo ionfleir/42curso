@@ -5,28 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/06 19:14:32 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/18 15:16:53 by aburga-g         ###   ########.fr       */
+/*   Created: 2025/03/20 13:10:40 by aburga-g          #+#    #+#             */
+/*   Updated: 2025/03/20 15:53:15 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/push_swap.h"
+#include "inc/push_swap.h"
 
 int	main(int argc, char **argv)
 {
-	t_stack	a;
-	a = //crear un funcion para crear la pila a
-	if (!a || si hay duplicados(a))
+	t_stack	*a;
+
+	if (!--argc)
+		exit(0);
+	a = ft_stack_add(argc, argv);
+	/*if (!a || si hay duplicados(a))
 	//comprobar si la pila no se creo (!a), o si hay duplicados Funcion si hay 
 	//duplicados.
 	{
 		//si hay un problema
 		//liberamos memoria(a); //crear una funcion para liberar memoria.
-		//mostar en pantalla un mensaje de error
+		ft_error();
 	}
 	//una vez tenemos la pilla verificamos si esta ordenada
 	if (no esta ordenada(a))
 		//llamamos a un funcion para ordenar la pila(a);
-	//liberamos memoria utilizada por la pila(a);
+	//liberamos memoria utilizada por la pila(a);*/
+	print_stack(a);
 	return (0);
 }

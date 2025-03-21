@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 19:08:51 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/18 19:04:43 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/03/19 12:49:43 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_sa(t_stack **a, int j)
 		write (1, "sa\n", 2);
 }
 
-int	main()
+/*int	main()
 {
 	t_stack	*a;
 
@@ -35,4 +35,4 @@ int	main()
 	ft_sa(&a);
 	printf ("%d", a);
 	return (0);
-}
+}*/

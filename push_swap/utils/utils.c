@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 17:17:50 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/18 18:45:34 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/03/20 17:08:11 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ t_stack	*ft_stacklast(t_stack *stack)
  * @param head : Puntero al puntero del pimer elemento de la pila.
  * @param new_nodo : Puntero al nuevo nodo creado.
  */
-void	*ft_stack_back(t_stack **head, t_stack *new_nodo)
+void	ft_stack_back(t_stack **head, t_stack *new_nodo)
 {
 	t_stack	*temp;
 
@@ -55,7 +55,7 @@ void	*ft_stack_back(t_stack **head, t_stack *new_nodo)
  * @param content : puntero void al contenido que puede ser de cualquier tipo.
  * @return t_stack*: devuelve el puntero al nuevo nodo creado.
  */
-t_stack	*ft_stack_new(void *content)
+t_stack	*ft_stack_new(int content)
 {
 	t_stack	*new;
 
