@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 13:10:40 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/20 15:53:15 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/03/24 12:40:46 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(int argc, char **argv)
 {
 	t_stack	*a;
 
-	if (!--argc)
+	if (argc < 2)
 		exit(0);
 	a = ft_stack_add(argc, argv);
 	/*if (!a || si hay duplicados(a))

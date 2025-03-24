@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 08:44:25 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/20 15:47:02 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/03/24 20:14:03 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,11 @@ typedef struct s_stack
 
 /*...Stack initiation...*/
 t_stack	*ft_stack_add(int argc, char **argv);
+t_stack	*ft_stacksub(char **argv);
 
-/*...errors...*/
+/*...check and errors ...*/
 void	ft_error(void);
+int		ft_atoi_check(const char *str);
 /*...Nodes initiation...*/
 t_stack	*ft_stack_new(int content);
 t_stack	*ft_stacklast(t_stack *stack);

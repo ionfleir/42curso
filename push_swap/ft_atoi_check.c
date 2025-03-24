@@ -1,52 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stack_add.c                                     :+:      :+:    :+:   */
+/*   ft_atoi_check.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 16:52:33 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/24 20:19:56 by aburga-g         ###   ########.fr       */
+/*   Created: 2025/03/24 18:56:23 by aburga-g          #+#    #+#             */
+/*   Updated: 2025/03/24 20:37:48 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "inc/push_swap.h"
 
-t_stack	*ft_stacksub(char **argv)
+int	ft_atoi_check(const char *str)
 {
-	t_stack	*a;
-	char	**temp;
 	int		i;
+	int		neg;
+	long	resul;
 
-	a = NULL;
 	i = 0;
-	temp = ft_split(argv[1], 32);
-	while (temp[i])
+	neg = 1;
+	resul = 0;
+	while (str[i] >= 9 && str[i] <= 13 || str[i] == 32)
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
-		ft_stack_back(&a, ft_stack_new(ft_atoi_check(temp[i])));
+		if (str[i] == '-')
+			neg *= -1;
 		i++;
 	}
-	free(temp);
-	return (a);
-}
-
-t_stack	*ft_stack_add(int argc, char **argv)
-{
-	t_stack	*temp;
-	int		i;
-
-	temp = NULL;
-	i = 1;
-	if (argc == 2)
-		temp = ft_stacksub(argv);
-	else
+	if (!*str)
+		ft_error();
+	while (str[i])
 	{
-		while (i < argc)
-		{
-			ft_stack_back(&temp, ft_stack_new(ft_atoi_check(argv[i])));
-			i++;
-		}
+		if (!ft_isdigit(*str))
+			ft_error();
+		resul = (str[i] - '0') + (resul * 10);
+		i++;
 	}
-	return (temp);
+	if ((neg * resul) > 2147483647 || (neg * resul) < -2147483648)
+		ft_error();
+	return (resul * neg);
 }
-
