@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 16:52:33 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/24 20:19:56 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/03/31 14:54:53 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,19 @@ t_stack	*ft_stacksub(char **argv)
 	return (a);
 }
 
+/**
+ * @brief La función maneja dos casos:
+ * Si solo hay un argumento (además del nombre del programa),
+ * llama a `ft_stacksub(argv)`, que presumiblemente procesa una cadena 
+ * con múltiples valores.
+ * Si hay múltiples argumentos, los convierte en enteros usando ft_atoi_check()
+ * y los añade a la pila mediante `ft_stack_back()`
+ * 
+ * @param argc el numero de argumentos que se pasa al programa.
+ * @param argv Array de cadenas de caracteres que representan 
+ * los valores a almacenar en la pila.
+ * @return t_stack* un puntero a la pila creada (stack).
+ */
 t_stack	*ft_stack_add(int argc, char **argv)
 {
 	t_stack	*temp;
@@ -49,4 +62,3 @@ t_stack	*ft_stack_add(int argc, char **argv)
 	}
 	return (temp);
 }
-

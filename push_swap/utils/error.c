@@ -6,11 +6,11 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 16:18:44 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/24 20:20:58 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/03/31 14:21:07 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/push_swap.h"
+#include "../inc/push_swap.h"
 
 /**
  * @brief funcion para la salida estandar si ocurre un error

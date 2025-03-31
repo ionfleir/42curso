@@ -6,39 +6,47 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 18:56:23 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/24 20:37:48 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/03/31 14:35:10 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/push_swap.h"
+#include "../inc/push_swap.h"
 
+/**
+ * @brief La función omite los espacios en blanco iniciales y maneja los 
+ * signos '+' y '-'.
+ * Si la cadena contiene caracteres no numéricos (exceptuando los mencionados), 
+ * se llama a `ft_error()`.
+ * También verifica si el número resultante excede los límites de un
+ * entero (`INT_MAX` o `INT_MIN`) en cuyo caso también llama a `ft_error()`.
+ * 
+ * @param str puntero a la cadena de caracteres a convertir.
+ * @return int de vuelve la cadena convertida en su entero.
+ */
 int	ft_atoi_check(const char *str)
 {
-	int		i;
 	int		neg;
 	long	resul;
 
-	i = 0;
 	neg = 1;
 	resul = 0;
-	while (str[i] >= 9 && str[i] <= 13 || str[i] == 32)
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	while ((*str >= 9 && *str <= 13) || *str == ' ' || (*str == '+'))
+		str++;
+	if (*str == '-')
 	{
-		if (str[i] == '-')
-			neg *= -1;
-		i++;
+		neg *= -1;
+		str++;
 	}
 	if (!*str)
 		ft_error();
-	while (str[i])
+	while (*str)
 	{
 		if (!ft_isdigit(*str))
 			ft_error();
-		resul = (str[i] - '0') + (resul * 10);
-		i++;
+		resul = (*str - '0') + (resul * 10);
+		str++;
+		if ((neg * resul) > INT_MAX || (neg * resul) < INT_MIN)
+			ft_error();
 	}
-	if ((neg * resul) > 2147483647 || (neg * resul) < -2147483648)
-		ft_error();
 	return (resul * neg);
 }

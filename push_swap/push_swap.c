@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 13:10:40 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/24 12:40:46 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/03/31 14:22:12 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	main(int argc, char **argv)
 	if (argc < 2)
 		exit(0);
 	a = ft_stack_add(argc, argv);
-	/*if (!a || si hay duplicados(a))
-	//comprobar si la pila no se creo (!a), o si hay duplicados Funcion si hay 
+	if (!a || si hay duplicados(a))
+	/*comprobar si la pila no se creo (!a), o si hay duplicados Funcion si hay 
 	//duplicados.
 	{
 		//si hay un problema
