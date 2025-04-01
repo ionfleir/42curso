@@ -25,8 +25,8 @@
  */
 int	ft_atoi_check(const char *str)
 {
-	int		neg;
-	long	resul;
+	int			neg;
+	long long	resul;
 
 	neg = 1;
 	resul = 0;
@@ -45,8 +45,8 @@ int	ft_atoi_check(const char *str)
 			ft_error();
 		resul = (*str - '0') + (resul * 10);
 		str++;
-		if ((neg * resul) > INT_MAX || (neg * resul) < INT_MIN)
-			ft_error();
 	}
+	if ((neg * resul) > INT_MAX || (neg * resul) < INT_MIN)
+		ft_error();
 	return (resul * neg);
 }
