@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 08:44:25 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/28 17:28:38 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/04/02 13:46:34 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ t_stack	*ft_stacksub(char **argv);
 /*...check and errors ...*/
 void	ft_error(void);
 int		ft_atoi_check(const char *str);
+int		ft_duplicheck(t_stack *a);
+
 /*...Nodes initiation...*/
 t_stack	*ft_stack_new(int content);
 t_stack	*ft_stacklast(t_stack *stack);
