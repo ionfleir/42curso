@@ -16,6 +16,12 @@ int	main(int argc, char **argv)
 	if (argc < 2)
 		exit(0);
 	a = ft_stack_add(argc, argv);
+	if (!a || ft_duplicheck(a))
+	{
+		free(a);
+		ft_error();
+	}
+
 	print_stack(a);
 	return (0);
 }

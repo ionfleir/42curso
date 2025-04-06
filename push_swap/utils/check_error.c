@@ -21,6 +21,7 @@ void	ft_error(void)
 	write(1, "error\n", 6);
 	exit(1);
 }
+
 int	ft_duplicheck(t_stack *a)
 {
 	t_stack	*temp;
@@ -28,4 +29,16 @@ int	ft_duplicheck(t_stack *a)
 
 	i = a;
 
+	while (i)
+	{
+		temp = i->next;
+		while (temp)
+		{
+			if (temp->value == i->value)
+				return (1);
+			temp = temp->next;
+		}
+		i = i->next;
+	}
+	return (0);
 }

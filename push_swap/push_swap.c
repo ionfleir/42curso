@@ -20,10 +20,7 @@ int	main(int argc, char **argv)
 		exit(0);
 	a = ft_stack_add(argc, argv);
 	if (!a || ft_duplicheck(a))
-	/*comprobar si la pila no se creo (!a), o si hay duplicados Funcion si hay 
-	//duplicados.
 	{
-		//si hay un problema
 		//liberamos memoria(a); //crear una funcion para liberar memoria.
 		ft_error();
 	}
