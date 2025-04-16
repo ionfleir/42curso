@@ -18,10 +18,10 @@ int	main(int argc, char **argv)
 	a = ft_stack_add(argc, argv);
 	if (!a || ft_duplicheck(a))
 	{
-		free(a);
+		free_stack(&a);
 		ft_error();
 	}
-
 	print_stack(a);
+	free_stack(&a);
 	return (0);
 }

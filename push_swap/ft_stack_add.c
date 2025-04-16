@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 16:52:33 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/31 14:54:53 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/04/16 11:43:03 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_stack	*ft_stacksub(char **argv)
 		ft_stack_back(&a, ft_stack_new(ft_atoi_check(temp[i])));
 		i++;
 	}
-	free(temp);
+	free_split(temp);
 	return (a);
 }
 
