@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 12:05:38 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/04/16 11:40:32 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/04/16 12:28:55 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,14 @@ void	free_stack(t_stack **node)
 		*node = temp;
 	}
 }
-
+/**
+ * @brief funcion free_split para liberar memoria reservado por un array
+ * de string.
+ * Esta función libera cada string contenido en el array, y luego
+ * libera el propio array de punteros. Es útil para limpiar memoria
+ * reservada por funciones como ft_split.
+ * @param split doble puntero a char representa un array terminado en NULL
+ */
 void	free_split(char **split)
 {
 	int i;
