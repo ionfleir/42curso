@@ -6,29 +6,34 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 12:05:38 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/04/16 12:28:55 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/04/17 20:32:45 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
 /**
- * @brief funcion para liberar memoria de cada nodo 
+ * @brief libera completamete memoria de cada lista enlazada de tipo stack.
+ * 
+ * Esta funcion recorre la lista enlazada lapuntado por 'node' y libera 
+ * cara nodo uno por uno. Al finalizar, el puntero original apunta NULL;
  * 
  * @param node doble puntero al nodo que se va liberar.
  */
 void	free_stack(t_stack **node)
 {
-	t_stack	*temp;
-	if (!node || !*node)
+	t_stack *temp;
+	
+	if (!*node || !node)
 		return ;
 	while (*node)
 	{
-		temp = (*node) -> next;
+		temp = (*node)->next;
 		free(*node);
 		*node = temp;
 	}
 }
+
 /**
  * @brief funcion free_split para liberar memoria reservado por un array
  * de string.
@@ -39,15 +44,16 @@ void	free_stack(t_stack **node)
  */
 void	free_split(char **split)
 {
-	int i;
+	int	i;
 	
 	i = 0;
 	if (!split)
-		return;
+		return ;
 	while (split[i])
 	{
 		free(split[i]);
 		i++;
 	}
-	free(split); // Libera el array de punteros
+	free(split);// libera el array de punteros.
 }
+

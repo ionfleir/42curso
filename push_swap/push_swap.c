@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 13:10:40 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/04/16 11:57:42 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/04/17 20:01:14 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int	main(int argc, char **argv)
 	a = ft_stack_add(argc, argv);
 	if (!a || ft_duplicheck(a))
 	{
-		ft_free(&a);
+		free_stack(&a);
 		ft_error();
 	}
 	//una vez tenemos la pilla verificamos si esta ordenada
-	if (no esta ordenada(a))
+	if (!ft_is_sorted(a))
 		//llamamos a un funcion para ordenar la pila(a);
 	print_stack(a);
 	free_stack(&a);

@@ -21,6 +21,10 @@ int	main(int argc, char **argv)
 		free_stack(&a);
 		ft_error();
 	}
+	if (!ft_is_sorted(a))
+	{
+		ft_error();
+	}
 	print_stack(a);
 	free_stack(&a);
 	return (0);
