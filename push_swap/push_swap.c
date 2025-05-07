@@ -24,9 +24,10 @@ int	main(int argc, char **argv)
 		free_stack(&a);
 		ft_error();
 	}
-	//una vez tenemos la pilla verificamos si esta ordenada
 	if (!ft_is_sorted(a))
+	{
 		//llamamos a un funcion para ordenar la pila(a);
+	}	
 	print_stack(a);
 	free_stack(&a);
 	return (0);

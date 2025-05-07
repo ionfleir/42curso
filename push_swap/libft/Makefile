@@ -1,4 +1,5 @@
 NAME = libft.a
+
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c\
 	ft_isascii.c ft_isprint.c ft_strlen.c\
 	ft_memset.c ft_toupper.c ft_tolower.c\
@@ -17,26 +18,34 @@ BONUS_SRC = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c\
 	ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c\
 
 CFLAGS = -Wall -Wextra -Werror
+CC = gcc
+RM = rm -f
 
 OBJS = $(SRC:%.c=%.o)
 BONUS_OBJS = $(BONUS_SRC:%.c=%.o)
+
 #program
 all: $(NAME)
 
 $(NAME) : $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
+	@echo "Compilación completa."
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+#bonus
+bonus: $(NAME) $(BONUS_OBJS)
+
+ $(NAME): $(OBJS) $(BONUS_OBJS)
+	@ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+	@echo "Compilación completa."
 
 %.o : %.c
-	clang -c $(CFLAGS) $< -o $@
+	@$(CC) -c $(CFLAGS) $< -o $@
 
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
+	@$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
-PHONY : al clean fclean re bonus
+PHONY : all clean fclean re bonus

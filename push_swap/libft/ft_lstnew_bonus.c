@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 10:31:09 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/06 17:09:56 by aburga-g         ###   ########.fr       */
+/*   Updated: 2024/05/28 15:16:22 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ t_list	*ft_lstnew(void *content)
 
 /*int	main(void)
 {
-	t_list *node1 = ft_lstnew("hello");
+	t_list *node1 = ft_lstnwe("hello");
 	t_list *node2 = ft_lstnew("worls");
 	t_list *node3 = ft_lstnew("!");
 

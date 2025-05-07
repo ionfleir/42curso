@@ -7,7 +7,7 @@ CFLAGS = -Wall -Werror -Wextra
 CC = gcc
 RM = rm -f
 
-#--Sorrce and object files--
+#--Source and object files--
 SRC_CLIENT = client.c \
 			 utiles/ft_atoi.c
 OBJ_CLIENT = $(SRC_CLIENT:.c=.o)
