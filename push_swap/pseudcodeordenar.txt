@@ -1,0 +1,17 @@
+
+FUNCION ft_order(A)
+	SI la pila A ya está ordenada (usar ft_is_sorted(a))
+		RETORNAR (no hacer nada)
+
+	OBTENER el tamaño de la pila a (crear función stack_size(a))
+
+	SI tamaño == 2
+		SI el primer valor es mayor que el segundo
+			realizar swap (sa) para intercambiar los dos nodos
+
+	SI el tamaño es 3
+		llamar a ordenar_3_elementos(A)
+
+	SI tamaño > 3
+		// Más adelante implementarás algoritmos avanzados (ej: radix sort o pushes a pila b)
+FIN FUNCION

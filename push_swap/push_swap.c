@@ -26,7 +26,7 @@ int	main(int argc, char **argv)
 	}
 	if (!ft_is_sorted(a))
 	{
-		//llamamos a un funcion para ordenar la pila(a);
+		ft_order(&a);
 	}	
 	print_stack(a);
 	free_stack(&a);

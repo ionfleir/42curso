@@ -16,15 +16,15 @@ SRC = main.c \
 	  utils/free.c \
 	  utils/check_error.c
 
-OBJ = $(SRC:.c=.o)
-DEPS = $(OBJ:.o=.d)
+OBJ = $(SRC:.c=.o) # Archivos objeto de la carpeta src 
 
 #--Librería y encabezados--
-LIBFT = ./libft
-INCLUDE = I ./inc
-PRINT = ./ft_printf
+LIBFT = .
+INCLUDE = -I./inc
+#PRINT = ./ft_printf
 
 all: $(NAME)
+	@echo "Compilación completa."
 
 #--Compilar el ejecutable--
 $(NAME): $(OBJ)
@@ -33,18 +33,15 @@ $(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) -o $@ $^ $(INCLUDE) -L$(LIBFT) -lft
 	@echo "Compilación completa."
 
-#--Regla para compilar archivos .c en .o, creando carpetas necesarias--
-
-#--Incluir dependencias para recompilación automática--
-
 #--Clean y fclean--
 clean: 
-	@$(RM) $(OBJ) $(DEPS)
-
-
+	@$(RM) $(OBJ)
+	@make -C libft clean
+	@echo "Archivos objetos eliminados."
 
 fclean: clean
 	@$(RM) $(NAME)
+	@$(RM) libft.a
 
 re: fclean all
 
