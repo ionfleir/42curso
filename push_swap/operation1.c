@@ -71,11 +71,11 @@ void	ft_sb(t_stack **b, int print)
 }
 
 /**
- * @brief 
+ * @brief intercamba los dos primeros nodos a la vez tanto de la pila A y B
  * 
- * @param a 
- * @param b 
- * @param print 
+ * @param a puntero que apunta a la pila A.
+ * @param b puntero que apunta a la Pila B.
+ * @param print salida estandar imprime "ss" al terminar
  */
 void	ft_ss(t_stack **a, t_stack **b, int print)
 {
@@ -145,7 +145,7 @@ void	ft_pa(t_stack **a, t_stack **b, int print)
 {
 	t_stack	*temp;
 
-	if (!*b || !(*b)->next)
+	if (!*b)
 		return ;
 	temp = *b;
 	*b = (*b)->next;
@@ -166,7 +166,7 @@ void	ft_pb(t_stack **a, t_stack **b, int print)
 {
 	t_stack	*temp;
 
-	if (!*b || (*b)->next)
+	if (!*a)
 		return ;
 	temp = *a;
 	*a = (*a)->next;
@@ -175,3 +175,42 @@ void	ft_pb(t_stack **a, t_stack **b, int print)
 	if (print)
 		write(1, "pb\n", 3);
 }
+
+/*void	print_stack(t_stack *stack)
+{
+	while (stack)
+	{
+		printf("%d\n", stack->value);
+		stack = stack->next;
+	}
+}
+
+int	main(int argc, char **argv )
+{
+	t_stack *a = NULL;
+	t_stack *b = NULL;
+
+	if (argc < 2)
+		exit(0);
+
+	a = ft_stack_add(argc, argv);
+	if (!a)
+		ft_error();
+	printf("Antes del pa:\n");
+	printf("Pila A:\n");
+	print_stack(a);
+	printf("Pila B:\n");
+	print_stack(b);
+
+	ft_pb(&a, &b, 1);
+
+	printf("Despues del pb:\n");
+	printf("Pila A:\n");
+	print_stack(a);
+	printf("Pila B\n");
+	print_stack(b);
+
+	free_stack(&a);
+	free_stack(&b);
+	return (0);
+}*/
