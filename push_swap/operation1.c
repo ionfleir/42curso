@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./inc/push_swap.h"
+#include "inc/push_swap.h"
 
 //----swapp----
 /**
@@ -79,6 +79,8 @@ void	ft_sb(t_stack **b, int print)
  */
 void	ft_ss(t_stack **a, t_stack **b, int print)
 {
+	if (!a || *a || !(*a)->next || !b || !*b || !(*b)->next)
+		return ;
 	ft_sa(a, 0);
 	ft_sb(b, 0);
 	if (print)
@@ -86,16 +88,7 @@ void	ft_ss(t_stack **a, t_stack **b, int print)
 }
 
 
-/*void	print_stack(t_stack *stack)
-{
-	while (stack)
-	{
-		printf("%d\n", stack->value);
-		stack = stack->next;
-	}
-}
-
-int main (void)
+/*int main (void)
 {
 	t_stack	*b = NULL;
 	t_stack	*a = NULL;
@@ -149,8 +142,7 @@ void	ft_pa(t_stack **a, t_stack **b, int print)
 		return ;
 	temp = *b;
 	*b = (*b)->next;
-	temp->next = *a;
-	*a = temp;
+	ft_stack_front(a, temp);
 	if (print)
 		write(1, "pa\n", 3);
 }
@@ -170,22 +162,12 @@ void	ft_pb(t_stack **a, t_stack **b, int print)
 		return ;
 	temp = *a;
 	*a = (*a)->next;
-	temp->next = *b;
-	*b = temp;
+	ft_stack_front(b, temp);
 	if (print)
 		write(1, "pb\n", 3);
 }
 
-/*void	print_stack(t_stack *stack)
-{
-	while (stack)
-	{
-		printf("%d\n", stack->value);
-		stack = stack->next;
-	}
-}
-
-int	main(int argc, char **argv )
+/*int	main(int argc, char **argv )
 {
 	t_stack *a = NULL;
 	t_stack *b = NULL;
@@ -193,8 +175,8 @@ int	main(int argc, char **argv )
 	if (argc < 2)
 		exit(0);
 
-	a = ft_stack_add(argc, argv);
-	if (!a)
+	b = ft_stack_add(argc, argv);
+	if (!b)
 		ft_error();
 	printf("Antes del pa:\n");
 	printf("Pila A:\n");
@@ -202,7 +184,7 @@ int	main(int argc, char **argv )
 	printf("Pila B:\n");
 	print_stack(b);
 
-	ft_pb(&a, &b, 1);
+	ft_pa(&a, &b, 1);
 
 	printf("Despues del pb:\n");
 	printf("Pila A:\n");

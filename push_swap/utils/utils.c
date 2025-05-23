@@ -12,6 +12,35 @@
 
 #include "../inc/push_swap.h"
 
+
+/**
+ * @brief funcion para imprimir los stacks
+ * 
+ * @param stack puntero al stack que se va imprimir.
+ */
+void	print_stack(t_stack *stack)
+{
+	while (stack)
+	{
+		printf("%d\n", stack->value);
+		stack = stack->next;
+	}
+}
+
+/**
+ * @brief añade el elemento 'new' al principio de la pila.
+ * 
+ * @param stack puntero al puntero del primer elemento de la pila.
+ * @param ne puntero al elemento que se va a añadir.
+ */
+void	ft_stack_front(t_stack **stack, t_stack *new)
+{
+	if (!stack || !new)
+		return ;
+	new->next = *stack;
+	*stack = new;
+}
+
 /**
  * @brief esta funcion recorre hazta el final de la pila.
  * 

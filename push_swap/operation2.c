@@ -14,8 +14,10 @@
 
 //----Rotate----
 /**
- * @brief ft_ra rota el nodo superior de la pila "a", hacia abajo y desplaza los
- * nodos restantes hacia arriba, dejando el primer nodo en la ultima posición.
+ * @brief ft_ra: rota el nodo superior de la pila "a" hacia abajo,
+ * utiliza 'ft_stacklast' para recorrer la pila hasta el final.
+ * Desplaza los nodos restantes hacia arriba, dejando el primer 
+ * nodo en la ultima posición.
  * 
  * @param a puntero a la pila 'a'.
  * @param print salida estandar imprime "ra".
@@ -41,8 +43,10 @@ void	ft_ra(t_stack **a, int print)
 }
 
 /**
- * @brief ft_rb, rota el nodo superior de la pila "b" hacia abajo y desplaza los
- * nodos restantes hacia arriba, dejando el primer nodo en la ultima posición
+ * @brief ft_rb, rota el nodo superior de la pila "b" hacia abajo,
+ * utiliza 'ft_stacklast' para recorrer la pila hasta el final.
+ * Desplaza los nodos restantes hacia arriba, dejando el primer 
+ * nodo en la ultima posición.
  * 
  * @param b puntero a la pila "b".
  * @param print salida estandar imprime "rb"
@@ -85,21 +89,12 @@ void	ft_rr(t_stack **a, t_stack **b, int print)
 		write(1, "rr\n", 3);
 }
 
-/*void	print_stack(t_stack *stack)
-{
-	while (stack)
-	{
-		printf("%d\n", stack->value);
-		stack = stack->next;
-	}
-}
-
-	int main (void)
+/*int main (void)
 {
 	t_stack	*b = NULL;
 	t_stack	*a = NULL;
 
-	// Crear pila con los argumentos
+	// Crear pila con los argumentos 3, 2, 1
 	ft_stack_back(&a, ft_stack_new(3));
 	ft_stack_back(&a, ft_stack_new(2));
 	ft_stack_back(&a, ft_stack_new(1));
@@ -109,7 +104,7 @@ void	ft_rr(t_stack **a, t_stack **b, int print)
 	ft_stack_back(&b, ft_stack_new(5));
 	ft_stack_back(&b, ft_stack_new(4));
 
-	// Mostrar pila antes de sa
+	// Mostrar pila antes de la orden
 	printf("Antes de rr:\n");
 	printf("Pila A:\n");
 	print_stack(a);
@@ -117,16 +112,16 @@ void	ft_rr(t_stack **a, t_stack **b, int print)
 	print_stack(b);
 
 	//Ejecuatar funcion//
-	ft_rr(&a, &b, 1);  // 1 para que escriba "ss\n"
+	ft_rr(&a, &b, 1);  // 1 para que escriba la orden
 
 	printf("\nDespues de rr:\n");
 	printf("Pila A:\n");
 	print_stack(a);
-	printf("Plia B:\n");
+	printf("Pila B:\n");
 	print_stack(b);
 
 	// Liberar memoria
-	//free_stack(&a);
+	free_stack(&a);
 	free_stack(&b);
 	return (0);
 }*/

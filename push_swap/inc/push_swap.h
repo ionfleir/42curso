@@ -48,6 +48,7 @@ void	free_split(char **split);
 /*...Nodes initiation...*/
 t_stack	*ft_stack_new(int content);
 t_stack	*ft_stacklast(t_stack *stack);
+void	ft_stack_front(t_stack **stack, t_stack *new);
 void	ft_stack_back(t_stack **head, t_stack *new_nodo);
 void	print_stack(t_stack *stack);
 /*...Operations...*/
