@@ -12,19 +12,23 @@
 
 #include "../inc/push_swap.h"
 
-
 /**
- * @brief funcion para imprimir los stacks
+ * @brief cuenta el numero de elementos de una pila.
  * 
- * @param stack puntero al stack que se va imprimir.
+ * @param stack puntero a la pila que va contar
+ * @return int numero de elementos de la pila.
  */
-void	print_stack(t_stack *stack)
+int	ft_stack_size(t_stack *stack)
 {
+	int	count;
+
+	count = 0;
 	while (stack)
 	{
-		printf("%d\n", stack->value);
+		count++;
 		stack = stack->next;
 	}
+	return (count);
 }
 
 /**

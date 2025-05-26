@@ -13,10 +13,7 @@ int	main(int argc, char **argv)
 		ft_error(); // imprimimos si "error" si no existe "a" o si hay duplicados.
 	}
 	if (!ft_is_sorted(a)) // verificamos si esta ordenado en forma acendente.
-	{
-		//Si no esta ordenado llamos a funcion para ordenar la pila 'a'.
-		ft_error();
-	}
+		ft_order(&a);
 	print_stack(a);
 	free_stack(&a);
 	return (0);

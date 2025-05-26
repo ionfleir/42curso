@@ -14,7 +14,12 @@ SRC = main.c \
 	  utils/utils.c \
 	  utils/ft_atoi_check.c \
 	  utils/free.c \
-	  utils/check_error.c
+	  utils/check_error.c \
+	  utils/print_stack.c \
+	  operation1.c \
+	  operation2.c \
+	  operation3.c \
+	  ft_order_all.c
 
 OBJ = $(SRC:.c=.o) # Archivos objeto de la carpeta src 
 

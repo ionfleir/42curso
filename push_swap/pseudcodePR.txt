@@ -1,28 +1,28 @@
 FUNCION PRINCIPAL main(argumentos):
 
-	DECLARAR variable "a" como puntero a pila (t_stack)
+	DECLARAR variable "a" como puntero a pila (t_stack) // listo
 
-	// Si no se pasan argumentos suficientes, terminamos el programa
-	SI el número de argumentos es menor que 2 ENTONCES
-		terminar programa (exit)
+	// Si no se pasan argumentos suficientes, terminamos el programa // listo
+	SI el número de argumentos es menor que 2 ENTONCES // listo
+		terminar programa (exit) // listo
 
-	// Crear la pila 'a' con los valores pasados como argumentos
-	a = crear_pila_con_argumentos(argumentos)
+	// Crear la pila 'a' con los valores pasados como argumentos // listo
+	a = crear_pila_con_argumentos(argumentos) // listo
 
-	// Comprobar si la pila no se ha creado correctamente o hay duplicados
-	SI la pila 'a' no existe O hay valores duplicados en la pila ENTONCES
-		liberar la memoria de la pila
-		mostrar error y terminar programa
+	// Comprobar si la pila no se ha creado correctamente o hay duplicados // listo
+	SI la pila 'a' no existe O hay valores duplicados en la pila ENTONCES // listo
+		liberar la memoria de la pila // listo
+		mostrar error y terminar programa // listo
 
-	// Comprobar si la pila NO está ordenada
-	SI la pila 'a' NO está ordenada ENTONCES
-		llamar a la función para ordenar la pila 'a'
+	// Comprobar si la pila NO está ordenada // listo
+	SI la pila 'a' NO está ordenada ENTONCES 
+		llamar a la función para ordenar la pila 'a' 
 
-	// Imprimir la pila (para verificar el resultado)
-	imprimir_pila(a)
+	// Imprimir la pila (para verificar el resultado) // listo
+	imprimir_pila(a) // listo
 
-	// Liberar la memoria de la pila antes de salir
-	liberar_memoria_pila(a)
+	// Liberar la memoria de la pila antes de salir // listo
+	liberar_memoria_pila(a) // listo
 
-	// Terminar el programa correctamente
-	retornar 0
+	// Terminar el programa correctamente // listo
+	retornar 0 // listo

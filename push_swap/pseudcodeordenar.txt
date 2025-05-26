@@ -1,8 +1,5 @@
 
 FUNCION ft_order(A)
-	SI la pila A ya está ordenada (usar ft_is_sorted(a))
-		RETORNAR (no hacer nada)
-
 	OBTENER el tamaño de la pila a (crear función stack_size(a))
 
 	SI tamaño == 2

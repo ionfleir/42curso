@@ -38,9 +38,11 @@ void	ft_error(void);
 int		ft_atoi_check(const char *str);
 int		ft_duplicheck(t_stack *a);
 int		ft_is_sorted(t_stack *a);
+int		ft_stack_size(t_stack *stack);
 
-/*...order all...*/
+/*...order...*/
 void	ft_order(t_stack **a);
+void	ft_stack_three(t_stack **a);
 /*...free all...*/
 void	free_stack(t_stack **node);
 void	free_split(char **split);
@@ -65,5 +67,4 @@ void	ft_rrb(t_stack **b, int print);
 void	ft_rrr(t_stack **a, t_stack **b, int print);
 /*...Comands...*/
 
-/*...Algoritmos...*/
 #endif
