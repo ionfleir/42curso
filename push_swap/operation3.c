@@ -14,6 +14,13 @@
 
 //---reverse---
 
+/**
+ * @brief retorna el node inferio hacia arriba utilizando ft_stacklast para llegar
+ * al final de la pila y ft_stack_front para colocarlo el inicio.
+ * 
+ * @param a puntero a la pila 'A'
+ * @param print imprime 'rra'
+ */
 void	ft_rra(t_stack **a, int print)
 {
 	t_stack	*prev;
@@ -32,6 +39,13 @@ void	ft_rra(t_stack **a, int print)
 		write(1, "rra\n", 4);
 }
 
+/**
+ * @brief retorna el node inferio hacia arriba utilizando ft_stacklast para llegar
+ * al final de la pila y ft_stack_front para colocarlo el inicio.
+ * 
+ * @param b puntero a la pila 'B'
+ * @param print imprime 'rrb'
+ */
 void	ft_rrb(t_stack **b, int print)
 {
 	t_stack	*prev;
@@ -50,6 +64,13 @@ void	ft_rrb(t_stack **b, int print)
 		write(1, "rrb\n", 4);
 }
 
+/**
+ * @brief retorna tanto a como b a la vez
+ * 
+ * @param a puntero a la pila 'A'
+ * @param b puntero a la pila 'B'
+ * @param print imprime 'rrr'
+ */
 void	ft_rrr(t_stack **a, t_stack **b, int print)
 {
 	ft_rra(a, 0);

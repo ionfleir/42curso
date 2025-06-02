@@ -12,6 +12,65 @@
 
 #include "inc/push_swap.h"
 
+void	ft_sortmax(t_stack **a)
+{
+	t_stack	*b = NULL;
+	int		i = 0;
+	int		j;
+	int		size = ft_stack_size(*a);
+	int		max_bits = 0;
+
+	// Encuentra cuántos bits se necesitan para representar el mayor índice
+	while ((size - 1) >> max_bits)
+		max_bits++;
+
+	while (i < max_bits)
+	{
+		j = 0;
+		while (j < size)
+		{
+			if ((((*a)->index >> i) & 1) == 0)
+				ft_pb(a, &b, 1); // bit 0 => lo mandamos a B
+			else
+				ft_ra(a, 1); // bit 1 => lo rotamos
+			j++;
+		}
+		while (b)
+			ft_pa(a, &b, 1); // devolvemos todos a A
+		i++;
+	}
+}
+
+/**
+ * @brief funcion que ordena 5 numeros usando dos pilas, utiliza un indece para
+ * en contrar la posicion del valor mas pequeño y asi poder elegir de formas mas
+ * eficiente y en menor costo posible de operaciones, mueve los dos mas pequeños
+ * a la pila B, dejando 3 en la pila a llama a ft_stack_tree para ordenar, una vez
+ * ordenado devuelve a la pila A los nodos de la pila B ya ordenados
+ * 
+ * @param a puntero a la pila que se va ordenar
+ */
+void	ft_stack_five(t_stack **a)
+{
+	t_stack *b = NULL;
+	int	pos;
+
+	while (ft_stack_size(*a) > 3)
+	{
+		pos = ft_index(*a, ft_valmin(*a));
+		if (pos < ft_stack_size(*a) - pos)
+			while ((*a)->value != ft_valmin(*a))
+				ft_ra(a, 1);
+		else
+			while ((*a)->value != ft_valmin(*a))
+				ft_rra(a, 1);
+		ft_pb(a, &b, 1);
+	}
+	ft_stack_three(a);
+	while (b)
+		ft_pa(a, &b, 1);
+}
+
 /**
  * @brief fruncion para ordenar 3 numeros segun en que pocision esten 
  * usando solo sa, ra, rra
@@ -42,7 +101,6 @@ void	ft_stack_three(t_stack **a)
 		if (!ft_is_sorted(*a))
 			ft_sa(a, 1);
 	}
-
 	else if (frist > second && frist < third)// caso 2 1 3
 		ft_sa(a, 1);
 	else if (frist < second && frist > third) // caso 2 3 1
@@ -52,8 +110,9 @@ void	ft_stack_three(t_stack **a)
 /**
  * @brief funcion que ordena la pila segun el numero de nodos que contenga la pila
  * si el numero de pilas es igual a 2 hace un swap (ft_sa)
- * si el nuemro de pilas es igual a 3 llama a ft_stack_three 
- * si el numero de polas es mayor a 3 llama a ft_sort
+ * si el numero de pilas es igual a 3 llama a ft_stack_three
+ * si el numero de pilas es igual a 5 llama a ft_stack_five
+ * si el numero de pilas es mayor a 5 llama a ft_sortmax
  * 
  * @param a puntero a la pila que se va ordenar.
  */
@@ -66,9 +125,11 @@ void	ft_order(t_stack **a)
 		ft_sa(a, 1);
 	else if (size == 3)
 		ft_stack_three(a); // crear
-	
-	//else if (size > 3)
-		//ft_sortmax(*a); // crear
-	else
-		ft_error();
+	else if (size == 5)
+		ft_stack_five(a);
+	else if (size > 5)
+	{
+		ft_assign_index(*a);
+		ft_sortmax(a); // crear
+	}
 }

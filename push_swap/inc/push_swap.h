@@ -43,16 +43,24 @@ int		ft_stack_size(t_stack *stack);
 /*...order...*/
 void	ft_order(t_stack **a);
 void	ft_stack_three(t_stack **a);
+void	ft_stack_five(t_stack **a);
+void	ft_sortmax(t_stack **a);
+
 /*...free all...*/
 void	free_stack(t_stack **node);
 void	free_split(char **split);
 
-/*...Nodes initiation...*/
+/*...Nodes initiation and utils..*/
 t_stack	*ft_stack_new(int content);
 t_stack	*ft_stacklast(t_stack *stack);
 void	ft_stack_front(t_stack **stack, t_stack *new);
 void	ft_stack_back(t_stack **head, t_stack *new_nodo);
 void	print_stack(t_stack *stack);
+int		ft_valmin(t_stack *a);
+int		ft_valmax(t_stack *a);
+int		ft_index(t_stack *a, int nbr);
+void	ft_assign_index(t_stack *a);
+
 /*...Operations...*/
 void	ft_sa(t_stack **a, int print);
 void	ft_sb(t_stack **b, int print);
@@ -65,6 +73,5 @@ void	ft_rr(t_stack **a, t_stack **b, int print);
 void	ft_rra(t_stack **a, int print);
 void	ft_rrb(t_stack **b, int print);
 void	ft_rrr(t_stack **a, t_stack **b, int print);
-/*...Comands...*/
 
 #endif

@@ -128,7 +128,7 @@ void	ft_ss(t_stack **a, t_stack **b, int print)
 //----Push----
 
 /**
- * @brief la funcion ft_pa se utilisa para mover la pila 'B' a la pila 'A',
+ * @brief la funcion ft_pa se utilisa para mover un nodo de la pila 'B' a la pila 'A',
  * 
  * @param a puntero que apunta a la pila a;
  * @param b puntero que apunta a la pila b;
@@ -148,7 +148,7 @@ void	ft_pa(t_stack **a, t_stack **b, int print)
 }
 
 /**
- * @brief la fincion ft_pb se utilisa para mover la pila 'A' a la pila 'B'
+ * @brief la fincion ft_pb se utilisa para mover un nodo de la pila 'A' a la pila 'B'
  * 
  * @param a puntero a la pila 'A'
  * @param b puntero a la pila 'B'

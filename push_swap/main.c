@@ -12,7 +12,8 @@ int	main(int argc, char **argv)
 		free_stack(&a); // liberamos todos los stacks
 		ft_error(); // imprimimos si "error" si no existe "a" o si hay duplicados.
 	}
-	if (!ft_is_sorted(a)) // verificamos si esta ordenado en forma acendente.
+	if (!ft_is_sorted(a))
+	 // verificamos si esta ordenado en forma acendente.
 		ft_order(&a);
 	print_stack(a);
 	free_stack(&a);

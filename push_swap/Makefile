@@ -12,6 +12,7 @@ RM = rm -f
 SRC = main.c \
 	  ft_stack_add.c \
 	  utils/utils.c \
+	  utils/utils2.c \
 	  utils/ft_atoi_check.c \
 	  utils/free.c \
 	  utils/check_error.c \
