@@ -12,34 +12,25 @@
 
 #include "../inc/push_swap.h"
 
-void	ft_assign_index(t_stack *a)
+void	ft_assign_index(t_stack *stack)
 {
-	t_stack	*current;
-	t_stack	*compare;
-	int		index;
+	t_stack *i;
+	t_stack *j;
+	int index;
 
-	while (a)
+	i = stack;
+	while (i)
 	{
 		index = 0;
-		compare = a->next;
-		current = a;
-		while (compare)
+		j = stack;
+		while (j)
 		{
-			if (compare->value < current->value)
+			if (j->value < i->value)
 				index++;
-			else
-				index--;
-			compare = compare->next;
+			j = j->next;
 		}
-		a->index = 0;
-		compare = a;
-		while (compare)
-		{
-			if (compare->value < a->value)
-				a->index++;
-			compare = compare->next;
-		}
-		a = a->next;
+		i->index = index;
+		i = i->next;
 	}
 }
 
