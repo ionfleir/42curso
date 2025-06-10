@@ -14,21 +14,19 @@
 
 int	main(int argc, char **argv)
 {
-	t_stack	*a;
+	t_stack	*a; // Declaramos una varaible con puntero "a" pila (t_stack)
 
-	if (argc < 2)
-		exit(0);
-	a = ft_stack_add(argc, argv);
-	if (!a || ft_duplicheck(a))
+	if (argc < 2) // verificamos que nos den mas de 2 argumentos.
+		exit(0); // si no termina el programa
+	a = ft_stack_add(argc, argv); // Creamos la pila a con los valores pasados
+	if (!a || ft_duplicheck(a)) // verficamos si exite la pila a y si no hay duplicados
 	{
-		free_stack(&a);
-		ft_error();
+		free_stack(&a); // liberamos todos los stacks
+		ft_error(); // imprimimos si "error" si no existe "a" o si hay duplicados.
 	}
-	if (!ft_is_sorted(a))
-	{
-		ft_order(&a);
-	}	
-	print_stack(a);
-	free_stack(&a);
+	if (!ft_is_sorted(a))// verificamos si esta ordenado en forma acendente
+		ft_order(&a); //ordemanos toda la pila.
+	print_stack(a); // imprimimos la pila ordenada
+	free_stack(&a);// liberamos memoria de la pila
 	return (0);
 }

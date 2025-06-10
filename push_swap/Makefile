@@ -9,7 +9,7 @@ RM = rm -f
 #--Directorios--
 
 #--Archivos fuente y objetos--
-SRC = main.c \
+SRC = push_swap.c \
 	  ft_stack_add.c \
 	  utils/utils.c \
 	  utils/utils2.c \
@@ -20,7 +20,8 @@ SRC = main.c \
 	  operation1.c \
 	  operation2.c \
 	  operation3.c \
-	  ft_order_all.c
+	  ft_order_all.c \
+	  ft_orderbit.c
 
 OBJ = $(SRC:.c=.o) # Archivos objeto de la carpeta src 
 

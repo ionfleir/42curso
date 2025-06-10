@@ -12,35 +12,6 @@
 
 #include "inc/push_swap.h"
 
-void	ft_sortmax(t_stack **a)
-{
-	t_stack	*b = NULL;
-	int		i = 0;
-	int		j;
-	int		size = ft_stack_size(*a);
-	int		max_bits = 0;
-
-	// Encuentra cuántos bits se necesitan para representar el mayor índice
-	while ((size - 1) >> max_bits)
-		max_bits++;
-
-	while (i < max_bits)
-	{
-		j = 0;
-		while (j < size)
-		{
-			if ((((*a)->index >> i) & 1) == 0)
-				ft_pb(a, &b, 1); // bit 0 => lo mandamos a B
-			else
-				ft_ra(a, 1); // bit 1 => lo rotamos
-			j++;
-		}
-		while (b)
-			ft_pa(a, &b, 1); // devolvemos todos a A
-		i++;
-	}
-}
-
 /**
  * @brief funcion que ordena 5 numeros usando dos pilas, utiliza un indece para
  * en contrar la posicion del valor mas pequeño y asi poder elegir de formas mas

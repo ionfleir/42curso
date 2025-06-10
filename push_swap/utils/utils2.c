@@ -12,28 +12,6 @@
 
 #include "../inc/push_swap.h"
 
-void	ft_assign_index(t_stack *stack)
-{
-	t_stack *i;
-	t_stack *j;
-	int index;
-
-	i = stack;
-	while (i)
-	{
-		index = 0;
-		j = stack;
-		while (j)
-		{
-			if (j->value < i->value)
-				index++;
-			j = j->next;
-		}
-		i->index = index;
-		i = i->next;
-	}
-}
-
 /**
  * @brief Esta funcion busca el indice donde se encuentra el valor numerico que se
  * le da en una pila
