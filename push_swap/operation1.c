@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 19:08:51 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/03/19 12:49:43 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/06/12 10:39:32 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	ft_sa(t_stack **a, int print)
 void	ft_sb(t_stack **b, int print)
 {
 	t_stack	*first;
-	t_stack *second;
+	t_stack	*second;
 
 	if (!b || !*b || !(*b)->next)
 		return ;

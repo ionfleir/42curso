@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aburga-g <aburga-g@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 18:48:57 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/05/28 18:48:57 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/06/12 11:10:54 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
 /**
- * @brief Esta funcion busca el indice donde se encuentra el valor numerico que se
- * le da en una pila
+ * @brief Esta funcion busca el indice donde se encuentra el valor numerico
+ * que se le da en una pila
  * 
  * @param a puntero a la pila A
  * @param nbr valor numerico que se va buscar
@@ -66,7 +66,7 @@ int	ft_valmin(t_stack *a)
 	int	min;
 
 	if (!a)
-		return(0);
+		return (0);
 	min = a->value;
 	while (a)
 	{

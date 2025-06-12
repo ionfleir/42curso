@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   operation3.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aburga-g <aburga-g@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 17:28:58 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/05/21 17:28:58 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/06/12 10:39:13 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 //---reverse---
 
 /**
- * @brief retorna el node inferio hacia arriba utilizando ft_stacklast para llegar
+ * @brief retorna el node inferio hacia arriba utilizando ft_stacklast para 
+ * llegar
  * al final de la pila y ft_stack_front para colocarlo el inicio.
  * 
  * @param a puntero a la pila 'A'
@@ -40,7 +41,8 @@ void	ft_rra(t_stack **a, int print)
 }
 
 /**
- * @brief retorna el node inferio hacia arriba utilizando ft_stacklast para llegar
+ * @brief retorna el node inferio hacia arriba utilizando ft_stacklast para 
+ * llegar
  * al final de la pila y ft_stack_front para colocarlo el inicio.
  * 
  * @param b puntero a la pila 'B'
