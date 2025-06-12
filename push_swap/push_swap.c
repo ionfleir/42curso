@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 13:10:40 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/04/17 20:01:14 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/06/12 10:40:08 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int argc, char **argv)
 	if (argc < 2) // verificamos que nos den mas de 2 argumentos.
 		exit(0); // si no termina el programa
 	a = ft_stack_add(argc, argv); // Creamos la pila a con los valores pasados
-	if (!a || ft_duplicheck(a)) // verficamos si exite la pila a y si no hay duplicados
+	if (!a || ft_duplicheck(a)) //verficamos si exite la pila a y si no hay duplicados
 	{
 		free_stack(&a); // liberamos todos los stacks
 		ft_error(); // imprimimos si "error" si no existe "a" o si hay duplicados.

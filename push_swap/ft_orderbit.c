@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_orderbit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aburga-g <aburga-g@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 19:09:22 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/06/10 19:09:22 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/06/12 11:15:05 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_assign_index(t_stack *stack)
 {
-	t_stack *i;
-	t_stack *j;
-	int index;
+	t_stack	*i;
+	t_stack	*j;
+	int		index;
 
 	i = stack;
 	while (i)
@@ -39,15 +39,20 @@ void	ft_assign_index(t_stack *stack)
  * 
  * @param a 
  */
+
 void	ft_sortmax(t_stack **a)
 {
-	t_stack	*b = NULL;
-	int		i = 0;
+	t_stack	*b;
+	int		i;
 	int		j;
-	int		size = ft_stack_size(*a);
-	int		max_bits = 0;
+	int		size;
+	int		max_bits;
 
-	// Encuentra cuántos bits se necesitan para representar el mayor índice
+	b = NULL;
+	size = ft_stack_size(*a);
+	i = 0;
+	max_bits = 0;
+	//Encuentra cuántos bits se necesitan para representar el mayor índice
 	while ((size - 1) >> max_bits)
 		max_bits++;
 
@@ -66,4 +71,5 @@ void	ft_sortmax(t_stack **a)
 			ft_pa(a, &b, 1); // devolvemos todos a A
 		i++;
 	}
+	free_stack(a);
 }

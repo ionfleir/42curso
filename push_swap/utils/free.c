@@ -6,7 +6,7 @@
 /*   By: aburga-g < aburga-g@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 12:05:38 by aburga-g          #+#    #+#             */
-/*   Updated: 2025/04/17 20:32:45 by aburga-g         ###   ########.fr       */
+/*   Updated: 2025/06/12 10:49:19 by aburga-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
  */
 void	free_stack(t_stack **node)
 {
-	t_stack *temp;
-	
+	t_stack	*temp;
+
 	if (!*node || !node)
 		return ;
 	while (*node)
@@ -45,7 +45,7 @@ void	free_stack(t_stack **node)
 void	free_split(char **split)
 {
 	int	i;
-	
+
 	i = 0;
 	if (!split)
 		return ;
