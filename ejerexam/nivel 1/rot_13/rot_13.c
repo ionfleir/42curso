@@ -10,8 +10,10 @@ void	rot_13(char *str)
 			str[i] += 13;
 		else if (str[i] >= 'A' && str[i] <= 'M')
 			str[i] += 13;
-		else if (str[i] == 'z' || str[i] == 'Z')
-			str[i] -= 25;
+		else if (str[i] >= 'n' && str[i] <= 'z')
+			str[i] -= 13;
+		else if (str[i] >= 'n' && str[i] <= 'z')
+			str[i] -= 13;
 		write(1, &str[i], 1);
 		i++;
 	}
