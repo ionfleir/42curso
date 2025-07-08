@@ -30,11 +30,12 @@ int	ft_atoi_check(const char *str)
 
 	neg = 1;
 	resul = 0;
-	while ((*str >= 9 && *str <= 13) || *str == ' ' || (*str == '+'))
+	while ((*str >= 9 && *str <= 13) || *str == ' ')
 		str++;
-	if (*str == '-')
+	if (*str == '-' || *str == '+')
 	{
-		neg *= -1;
+		if (*str == '-')
+			neg = -1;
 		str++;
 	}
 	if (!*str)
