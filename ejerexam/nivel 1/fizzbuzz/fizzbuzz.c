@@ -27,3 +27,14 @@ int	main(void)
 		write (1, "\n", 1);
 	}
 }
+
+void print_number(int num)
+{
+	char digit;
+
+	if (num > 9)
+		print_number(num / 10);
+
+	digit = (num % 10) + '0';
+	write(1, &digit, 1);
+}
