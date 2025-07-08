@@ -4,7 +4,7 @@ int	main(int argc, char **argv)
 {
 	char	table[256] = {};
 	int		i = 0;
-	int		j = 0;
+	int		j;
 
 	if (argc == 3)
 	{
