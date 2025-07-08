@@ -18,6 +18,15 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+
+/**
+ * @brief la función imprime cada dígito de num utilizando write
+ * dividiendo recursivamente para imprimir del dígito más
+ * significativo al menos significativo.
+ * 
+ * @param num El número a imprimir.
+ */
+void	ft_putnbr(int	num);
 // check
 /**
  * @brief comprueba si el carácter determinado es un carácter alfabétido.
