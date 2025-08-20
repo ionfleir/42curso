@@ -1,0 +1,10 @@
+Assignment name : ft_itoa
+Expected files : ft_itoa.c
+Allowed functions: malloc
+
+Escribe una función que tome un int y lo convierta en una cadena terminada en nulo.
+La función devuelve el resultado en un array de caracteres que debes reservar (allocate).
+
+Tu función debe declararse de la siguiente manera:
+
+char	*ft_itoa(int nbr);

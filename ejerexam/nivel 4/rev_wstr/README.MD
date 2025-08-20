@@ -1,0 +1,27 @@
+Assignment name : rev_wstr
+Expected files : rev_wstr.c
+Allowed functions: write, malloc, free
+
+Escribe un programa que reciba una cadena como parámetro y muestre sus palabras en
+orden inverso.
+
+Una "palabra" es una parte de la cadena delimitada por espacios y/o tabulaciones, o por el
+inicio/fin de la cadena.
+
+Si el número de parámetros es diferente de 1, el programa mostrará
+'\n'.
+
+En los parámetros que van a ser probados, no habrá ningún espacio "adicional"
+(es decir, no habrá espacios adicionales al inicio o al final de la cadena, y las palabras siempre estarán separadas por exactamente un espacio).
+
+Ejemplos:
+
+$> ./rev_wstr "You hate people! But I love gatherings. Isn't it ironic?" | cat -e
+ironic? it Isn't gatherings. love I But people! hate You$
+$>./rev_wstr "abcdefghijklm"
+abcdefghijklm
+$> ./rev_wstr "Wingardium Leviosa" | cat -e
+Leviosa Wingardium$
+$> ./rev_wstr | cat -e
+$
+$>

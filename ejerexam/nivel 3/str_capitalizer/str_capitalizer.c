@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-void	rstr_capitalizer(char *str)
+void	str_capitalizer(char *str)
 {
 	int	i = 0;
 	
@@ -9,8 +9,8 @@ void	rstr_capitalizer(char *str)
 		if (str[i] >= 'A' && str[i] <= 'Z')
 			str[i] += 32;
 		if ((str[i] >= 'a' && str[i] <= 'z') &&
-			(str[i + 1] == ' ' || str[i + 1] == '\t' ||
-			str[i + 1] == '\0' || str[i + 1] == '\n'))
+			(str[i - 1] == ' ' || str[i - 1] == '\t' ||
+			str[i - 1] == '\0' || str[i - 1] == '\n'))
 			str[i] -= 32;
 		write(1, &str[i], 1);
 		i++;
@@ -25,7 +25,7 @@ int	main(int argc, char **argv)
 	{
 		while (i < argc)
 		{
-			rstr_capitalizer(argv[i]);
+			str_capitalizer(argv[i]);
 			write(1, "\n", 1);
 			i++;
 		}
